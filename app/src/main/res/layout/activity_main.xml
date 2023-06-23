@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnBefore"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:text="<="
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnDate"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Date"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="=>"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="290dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnKalender1"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="1"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender2"
+
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="2"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender3"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="3"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender4"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="4"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender5"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="5"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender6"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="6"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender7"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="7"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnKalender8"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="8"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender9"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="9"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender10"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="10"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalende11"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="11"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender12"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="12"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender13"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="13"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender14"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="14"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnKalender15"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="15"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender16"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="16"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender17"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="17"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender18"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="18"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender19"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="19"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender21"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="21"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender22"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="22"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnKalender23"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="23"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalende24"
+
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="24"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender25"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="25"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender26"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="26"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender27"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="27"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender28"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="28"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender29"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="29"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnKalender30"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="30"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnKalender31"
+
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="31"
+                android:textColor="@color/black" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

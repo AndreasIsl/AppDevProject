@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+.idea/modules.xml
+.idea/modules.xml
+.idea/misc.xml
