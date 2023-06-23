@@ -16,3 +16,9 @@ local.properties
 .idea/modules.xml
 .idea/modules.xml
 .idea/misc.xml
+.idea/workspace.xml
+.idea/sonarlint/issuestore/d/c/dccaa70c3477fdb8a3aa09bc31b69c1d4765f5ad
+.idea/sonarlint/issuestore/index.pb
+.idea/sonarlint/securityhotspotstore/d/c/dccaa70c3477fdb8a3aa09bc31b69c1d4765f5ad
+.idea/sonarlint/securityhotspotstore/index.pb
+*.pb
