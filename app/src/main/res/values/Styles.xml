@@ -6,6 +6,8 @@
         <item name="android:backgroundTint">@color/Gray</item>
         <item name="android:layout_width">58dp</item>
         <item name="android:layout_height">58dp</item>
+        <item name="android:textColor">@color/lightGray</item>
+        <item name="android:textAlignment">textEnd</item>
 
     </style>
 
