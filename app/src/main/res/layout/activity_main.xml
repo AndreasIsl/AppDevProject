@@ -35,7 +35,7 @@
             android:backgroundTint="@color/white"
             android:text="Date"
             android:textColor="@color/black"
-            />
+            android:textSize="20dp"/>
 
         <Button
             android:id="@+id/btnNext"
@@ -136,7 +136,7 @@
                  />
 
             <Button
-                android:id="@+id/btnKalende11"
+                android:id="@+id/btnKalender11"
                 style="@style/KalendarButtonStyle"
                 android:backgroundTint="@color/purple_700"
                 android:text="11"
@@ -203,11 +203,25 @@
                  />
 
             <Button
+                android:id="@+id/btnKalender20"
+                style="@style/KalendarButtonStyle"
+                android:backgroundTint="@color/purple_700"
+                android:text="20"
+                />
+
+            <Button
                 android:id="@+id/btnKalender21"
                 style="@style/KalendarButtonStyle"
                 android:backgroundTint="@color/purple_700"
                 android:text="21"
                 />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btnKalender22"
@@ -215,11 +229,6 @@
                 android:backgroundTint="@color/purple_700"
                 android:text="22"
                 />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btnKalender23"
@@ -229,7 +238,7 @@
                  />
 
             <Button
-                android:id="@+id/btnKalende24"
+                android:id="@+id/btnKalender24"
 
                 style="@style/KalendarButtonStyle"
                 android:backgroundTint="@color/purple_700"
@@ -264,17 +273,19 @@
                 android:text="28"
                 />
 
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btnKalender29"
                 style="@style/KalendarButtonStyle"
                 android:backgroundTint="@color/purple_700"
                 android:text="29"
                 />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btnKalender30"
