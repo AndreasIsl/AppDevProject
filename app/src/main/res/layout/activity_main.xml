@@ -49,6 +49,7 @@
     </LinearLayout>
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="409dp"
         android:layout_height="290dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,52 +63,38 @@
             <Button
                 android:id="@+id/btnKalender1"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="1"
-                />
+                android:text="1" />
 
             <Button
                 android:id="@+id/btnKalender2"
 
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="2"
-                />
+                android:text="2" />
 
             <Button
                 android:id="@+id/btnKalender3"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="3"
-                />
+                android:text="3" />
 
             <Button
                 android:id="@+id/btnKalender4"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="4"
-                />
+                android:text="4" />
 
             <Button
                 android:id="@+id/btnKalender5"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="5"
-                />
+                android:text="5" />
 
             <Button
                 android:id="@+id/btnKalender6"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="6"
-                />
+                android:text="6" />
 
             <Button
                 android:id="@+id/btnKalender7"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="7"
-                />
+                android:text="7" />
         </TableRow>
 
         <TableRow
@@ -117,50 +104,37 @@
             <Button
                 android:id="@+id/btnKalender8"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="8"
-                />
+                android:text="8" />
 
             <Button
                 android:id="@+id/btnKalender9"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="9"
-                 />
+                android:text="9" />
 
             <Button
                 android:id="@+id/btnKalender10"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="10"
-                 />
+                android:text="10" />
 
             <Button
                 android:id="@+id/btnKalender11"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="11"
-                />
+                android:text="11" />
 
             <Button
                 android:id="@+id/btnKalender12"
                 style="@style/KalendarButtonStyle"
-                android:text="12"
-                />
+                android:text="12" />
 
             <Button
                 android:id="@+id/btnKalender13"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="13"
-               />
+                android:text="13" />
 
             <Button
                 android:id="@+id/btnKalender14"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="14"
-                />
+                android:text="14" />
         </TableRow>
 
         <TableRow
@@ -170,51 +144,37 @@
             <Button
                 android:id="@+id/btnKalender15"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="15"
-               />
+                android:text="15" />
 
             <Button
                 android:id="@+id/btnKalender16"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="16"
-                />
+                android:text="16" />
 
             <Button
                 android:id="@+id/btnKalender17"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="17"
-                 />
+                android:text="17" />
 
             <Button
                 android:id="@+id/btnKalender18"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="18"
-                 />
+                android:text="18" />
 
             <Button
                 android:id="@+id/btnKalender19"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="19"
-                 />
+                android:text="19" />
 
             <Button
                 android:id="@+id/btnKalender20"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="20"
-                />
+                android:text="20" />
 
             <Button
                 android:id="@+id/btnKalender21"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="21"
-                />
+                android:text="21" />
 
 
         </TableRow>
@@ -226,52 +186,38 @@
             <Button
                 android:id="@+id/btnKalender22"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="22"
-                />
+                android:text="22" />
 
             <Button
                 android:id="@+id/btnKalender23"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="23"
-                 />
+                android:text="23" />
 
             <Button
                 android:id="@+id/btnKalender24"
 
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="24"
-                />
+                android:text="24" />
 
             <Button
                 android:id="@+id/btnKalender25"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="25"
-                />
+                android:text="25" />
 
             <Button
                 android:id="@+id/btnKalender26"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="26"
-               />
+                android:text="26" />
 
             <Button
                 android:id="@+id/btnKalender27"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="27"
-                />
+                android:text="27" />
 
             <Button
                 android:id="@+id/btnKalender28"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="28"
-                />
+                android:text="28" />
 
 
         </TableRow>
@@ -283,29 +229,47 @@
             <Button
                 android:id="@+id/btnKalender29"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="29"
-                />
+                android:text="29" />
 
             <Button
                 android:id="@+id/btnKalender30"
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="30"
-                />
+                android:text="30" />
 
             <Button
                 android:id="@+id/btnKalender31"
-
                 style="@style/KalendarButtonStyle"
-                android:backgroundTint="@color/purple_700"
-                android:text="31"
-                />
+                android:text="31" />
 
         </TableRow>
 
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/statusTV"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TextView
+        android:id="@+id/appointmentsTV"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:text=""
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusTV" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
