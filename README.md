@@ -9,5 +9,7 @@ List of features that could be added:
 + Scanning dates with the camera
 + A nice animated ui
 + Voice recognition
++ Shared calender
++ Shared appointments
 + etc
 
