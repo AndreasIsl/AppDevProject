@@ -1,29 +1,30 @@
 package com.example.appdevkalender
 
 import android.annotation.SuppressLint
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
+import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Button
-import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.content.ContextCompat
+import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.appdevkalender.databinding.ActivityMainBinding
-import java.time.Month
 import java.util.*
+
+data class Event(
+    val title: String,
+    val description: String,
+    val time: String
+)
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val calendar = Calendar.getInstance()
-    private  val year = calendar.get(Calendar.YEAR)
-    private val month = calendar.get(Calendar.MONTH)
-    private val day = calendar.get(Calendar.DAY_OF_MONTH)
+    private val chosenYear = calendar.get(Calendar.YEAR)
+    private val chosenMonth = calendar.get(Calendar.MONTH)
+    private val chosenDay = calendar.get(Calendar.DAY_OF_MONTH)
     private lateinit var calenderDayBtns: Array<Button>
-
+    private val eventsMap: HashMap<String, Event> = HashMap()
 
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,130 +32,64 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Rest of the code remains the same
 
-        val months = arrayOf("Jannuar","Februar","März","April","May","Juny","July","August","September","Oktober","November","December")
-        val previousBtn = binding.btnBefore
-        val nextBtn = binding.btnNext
+        binding.btnAddEvent.setOnClickListener {
+            val selectedDate = "${chosenDay}.${chosenMonth + 1}.${chosenYear}"
+            showAddEventDialog(selectedDate)
+        }
+    }
 
-        var chosenYear = year
-        var chosenMonth = month
-        var chosenDay = day
-        var chour = 0
-        var cminute = 0
+    // Rest of the code remains the same
 
-        val dateBtn = binding.btnDate
-        dateBtn.text = "${months[chosenMonth]} $chosenYear"
+    private fun showAddEventDialog(date: String) {
+        val dialog = AlertDialog.Builder(this)
+        val dialogView = layoutInflater.inflate(R.layout.dialog_add_event, null)
+        dialog.setView(dialogView)
+        dialog.setTitle("Add Event")
 
-        val statusTV = binding.statusTV
-        val appointmentTV = binding.appointmentsTV
+        val eventTitleEditText = dialogView.findViewById<EditText>(R.id.etEventTitle)
+        val eventDescriptionEditText = dialogView.findViewById<EditText>(R.id.etEventDescription)
+        // Add any other EditTexts or pickers for time, etc.
 
-          calenderDayBtns = arrayOf<Button>(
-            binding.btnKalender1,
-            binding.btnKalender2,
-            binding.btnKalender3,
-            binding.btnKalender4,
-            binding.btnKalender5,
-            binding.btnKalender6,
-            binding.btnKalender7,
-            binding.btnKalender8,
-            binding.btnKalender9,
-            binding.btnKalender10,
-            binding.btnKalender11,
-            binding.btnKalender12,
-            binding.btnKalender13,
-            binding.btnKalender14,
-            binding.btnKalender15,
-            binding.btnKalender16,
-            binding.btnKalender17,
-            binding.btnKalender18,
-            binding.btnKalender19,
-            binding.btnKalender20,
-            binding.btnKalender21,
-            binding.btnKalender22,
-            binding.btnKalender23,
-            binding.btnKalender24,
-            binding.btnKalender25,
-            binding.btnKalender26,
-            binding.btnKalender27,
-            binding.btnKalender28,
-            binding.btnKalender29,
-            binding.btnKalender30,
-            binding.btnKalender31
+        dialog.setPositiveButton("Save") { _, _ ->
+            val eventTitle = eventTitleEditText.text.toString()
+            val eventDescription = eventDescriptionEditText.text.toString()
+            // Get the time from other input fields in the dialog.
+
+            val currentDate = getCurrentDate()
+            val year = currentDate.get(Calendar.YEAR)
+            val month = currentDate.get(Calendar.MONTH) + 1 // Months are zero-based, so we add 1
+            val day = currentDate.get(Calendar.DAY_OF_MONTH)
+            val hour = currentDate.get(Calendar.HOUR_OF_DAY)
+            val minute = currentDate.get(Calendar.MINUTE)
+
+            println("Current Date: $year-$month-$day")
+            val event = Event(eventTitle, eventDescription, "$year-$month-$day $hour:$minute")
+            eventsMap[date] = event
+
+            // Update the UI for the corresponding day button to show the event icon.
+            // updateDayButtonWithEventIcon(date)
+        }
+
+        dialog.setNegativeButton("Cancel") { dialog: DialogInterface, _: Int ->
+            dialog.cancel()
+        }
+
+        dialog.show()
+    }
+
+    fun getCurrentDate(): Calendar {
+        return Calendar.getInstance()
+    }
+
+    /*private fun updateDayButtonWithEventIcon(date: String) {
+        val day = date.substringBefore(".")
+        val buttonIndex = day.toInt() - 1
+
+        // Set the event icon on the day button.
+        calenderDayBtns[buttonIndex].setCompoundDrawablesWithIntrinsicBounds(
+            0, 0, R.drawable.event_icon, 0
         )
-
-
-        makeBtnInvisibleAndVisible(chosenMonth)
-        calenderDayBtns[chosenDay - 1].setBackgroundColor(R.color.green)
-
-        previousBtn.setOnClickListener {
-            if(chosenMonth  == 0){
-                chosenMonth = 11
-                chosenYear --
-                dateBtn.text = "${months[chosenMonth]} ${chosenYear}"
-            }else {
-                chosenMonth --
-                dateBtn.text = "${months[chosenMonth]} ${chosenYear}"
-            }
-            makeBtnInvisibleAndVisible(chosenMonth)
-            //check if its the current month if not make the currentdayBtn white
-
-        }
-
-        nextBtn.setOnClickListener {
-            if(chosenMonth  == 11){
-                chosenMonth = 0
-                chosenYear ++
-                dateBtn.text = "${months[chosenMonth]} ${chosenYear}"
-            } else {
-                chosenMonth ++
-                dateBtn.text = "${months[chosenMonth]} ${chosenYear}"
-
-            }
-            makeBtnInvisibleAndVisible(chosenMonth)
-            //check if its the current month if not make the currentdayBtn white
-
-        }
-
-
-        for (btn in calenderDayBtns.indices) {
-            calenderDayBtns[btn].setOnClickListener {
-                statusTV.text = "${btn + 1}.${chosenMonth + 1}.${chosenYear}"
-                appointmentTV.text = "${btn + 1} of ${months[chosenMonth]} no Appointments "
-            }
-        }
-
-
-
-
-    }
-
-    private fun checkIfCurrentDate(date: Date): Boolean {
-        if (date.year == year && date.month == month) {
-            return true
-        }
-        return false
-    }
-
-    private fun checkIfCurrentMonthIs31(month: Int): Boolean {
-        if (month == 0 || month == 2 || month == 4 || month == 6 || month == 7 || month == 9 || month == 11){
-            return true
-        }
-        return false
-    }
-
-    private fun makeBtnInvisibleAndVisible(month: Int) {
-        if (checkIfCurrentMonthIs31(month)) {
-            calenderDayBtns[30].visibility = View.VISIBLE
-            calenderDayBtns[29].visibility = View.VISIBLE
-            calenderDayBtns[28].visibility = View.VISIBLE
-        } else if (month == 1) {
-            calenderDayBtns[30].visibility = View.GONE
-            calenderDayBtns[29].visibility = View.GONE
-            calenderDayBtns[28].visibility = View.GONE
-        } else {
-            calenderDayBtns[30].visibility = View.GONE
-            calenderDayBtns[29].visibility = View.VISIBLE
-            calenderDayBtns[28].visibility = View.VISIBLE
-        }
-    }
+    }*/
 }
